@@ -22,8 +22,9 @@ a { text-decoration: none; }
 .spec-row:nth-child(odd) { background: rgba(243,247,250,.8); }
 .spec-row:hover { background: #e1eff2; }
 .process-node:not(:last-child)::after { background: linear-gradient(90deg, #287d78, #1769aa); content: ""; height: 1px; left: calc(50% + 34px); position: absolute; right: calc(-50% + 34px); top: 34px; }
+@media (max-width: 767px) { .process-node::after { display: none; } }
 main > section:first-child { background-image: radial-gradient(circle at 82% 18%, rgba(72, 151, 145, .18), transparent 32%), linear-gradient(130deg, rgba(255,255,255,.035), transparent 55%); }
-.site-header { transition: box-shadow 220ms var(--ease-standard), background-color 220ms var(--ease-standard), border-color 220ms var(--ease-standard); }
+.site-header { transition: box-shadow 220ms var(--ease-standard), background-color 220ms var(--ease-standard), border-color 220ms var(--ease-standard), backdrop-filter 220ms var(--ease-standard), color 220ms var(--ease-standard); }
 .site-header.is-scrolled { border-color: rgba(216, 224, 229, .9); box-shadow: 0 8px 24px rgba(11, 34, 57, .08); }
 :where(a, button, input, select, textarea) { -webkit-tap-highlight-color: transparent; }
 :where(a, button, input, select, textarea):focus-visible { outline: 3px solid rgba(40, 125, 120, .5); outline-offset: 3px; }
