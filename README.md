@@ -1,48 +1,32 @@
-# Maven Solutions Website
+# Maven Solutions
 
-A static-first Next.js catalogue website for Maven Solutions, built from the supplied company, programme and technical-data PDFs.
+Maven Solutions provides specialty chemical solutions and technical programmes for pulp and paper manufacturing in India. Its work is shaped around practical process conditions, with support for retention, drainage, fibre recovery, process-water treatment, surface sizing and starch optimisation.
 
-## Requirements
+## What Maven does
 
-- Node.js 20+
-- npm (or pnpm)
+- Develops process-focused chemical solutions for paper-making operations.
+- Supports technical evaluation of retention, drainage, filler, process-water and fibre-recovery requirements.
+- Offers the REDRAMAX retention and drainage programme and the FIBRAMAX filler-retention programme.
+- Provides technical product data, programme literature and direct technical enquiry support.
 
-## Local development
+## Website overview
 
-```bash
-npm install
-npm run dev
-```
+This website is Maven Solutions’ technical catalogue and enquiry point. It includes:
 
-Open `http://localhost:3000`.
+- Product information for documented process chemicals.
+- Programme pages for REDRAMAX and FIBRAMAX.
+- Solutions organised around common mill challenges.
+- Downloadable technical resources and company information.
+- Contact details for technical enquiries.
 
-## Production build
+## Technical enquiries
 
-```bash
-npm run build
-npm run start
-```
+Maven Solutions welcomes conversations about paper grade, process conditions and chemical requirements.
 
-## Vercel deployment
+- Email: [Mavensolutions21@gmail.com](mailto:Mavensolutions21@gmail.com)
+- Phone: [+91 9897788735](tel:+919897788735)
+- Head Office: UGF, B-304, Chhattarpur, Chhattarpur Extension, South West Delhi, Delhi – 110074
 
-Import the `website` directory as the Vercel project root. Vercel will detect Next.js automatically; no server, database, Docker configuration or environment variables are required for this V1.
+## Content stewardship
 
-## Content model
-
-- `src/data/company.ts`: company details and navigation.
-- `src/data/products.ts`: documented catalogue products and their technical details.
-- `src/data/programs.ts`: flagship technical programmes.
-- `src/types/index.ts`: shared data types.
-
-To add a product, add a `Product` record in `src/data/products.ts`. The product route is statically created automatically. Add only source-supported product claims and specifications.
-
-## Images and downloadable resources
-
-Public PDFs live under `public/resources/`. Replace or remove these files if they are not approved for public distribution. This V1 intentionally uses code-native technical graphics rather than unrelated stock photography.
-
-## Remaining TODOs
-
-- Confirm the production domain and update the `base` constant in `src/app/sitemap.ts`.
-- Confirm public-distribution approval for every PDF in `public/resources/`.
-- Connect the enquiry form to a CRM/form service if email-client handoff is not suitable.
-- Add approved case studies, certifications, customer logos and official standalone logo assets when available.
+Product claims, specifications and downloadable documents are based on Maven source material. Technical suitability should be evaluated against the specific conditions of each process.
