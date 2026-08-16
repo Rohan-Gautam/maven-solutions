@@ -1,0 +1,5 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import type { Program } from "@/types";
+
+export function ProgramCard({ program, dark = false }: { program: Program; dark?: boolean }) { return <article className={`rounded-lg border p-7 shadow-sm transition duration-300 ease-out hover:-translate-y-1 hover:shadow-md sm:p-9 ${dark ? "border-white/20 bg-[#102a43] text-white" : "border-[#d8e0e5] bg-[#eef3f5] text-[#17212b]"}`}><p className={`tech-label ${dark ? "text-[#9ed7d1]" : "text-[#287d78]"}`}>{program.eyebrow}</p><h3 className="mt-6 text-3xl font-bold tracking-[-0.05em]">{program.name}</h3><p className={`mt-2 text-base font-semibold ${dark ? "text-white/80" : "text-[#53616e]"}`}>{program.label}</p><p className={`mt-5 max-w-md text-base leading-7 ${dark ? "text-white/80" : "text-[#53616e]"}`}>{program.description}</p><Link href={`/programs/${program.slug}`} className={`mt-7 inline-flex min-h-11 items-center gap-2 border-b font-bold transition hover:translate-x-0.5 ${dark ? "border-white text-white" : "border-[#1769aa] text-[#1769aa]"}`}>View programme <ArrowRight size={17} /></Link></article>; }
