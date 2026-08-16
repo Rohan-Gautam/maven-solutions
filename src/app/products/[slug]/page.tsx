@@ -7,15 +7,18 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ProductCard } from "@/components/ProductCard";
 import { TechnicalGraphic, productGraphicVariant } from "@/components/TechnicalGraphic";
 import { getProduct, products } from "@/data/products";
+import { pageMetadata, siteUrl } from "@/lib/seo";
 
 export function generateStaticParams() { return products.map(({ slug }) => ({ slug })); }
-export function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { return params.then(({ slug }) => { const product = getProduct(slug); return product ? { title: `${product.code} ${product.name}`, description: product.shortDescription } : {}; }); }
+export function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { return params.then(({ slug }) => { const product = getProduct(slug); return product ? pageMetadata(`${product.name} Paper Chemical`, product.shortDescription, `/products/${product.slug}`) : {}; }); }
 
 export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
   const product = getProduct((await params).slug); if (!product) notFound();
   const related = products.filter((item) => product.relatedProducts.includes(item.slug));
   const graphic = productGraphicVariant(product);
+  const structuredData = { "@context": "https://schema.org", "@graph": [{ "@type": "Product", name: product.name, description: product.description, sku: product.code, category: product.category, url: `${siteUrl}/products/${product.slug}`, brand: { "@type": "Brand", name: "Maven Solutions" }, manufacturer: { "@id": `${siteUrl}/#organization` }, additionalProperty: product.properties.map((property) => ({ "@type": "PropertyValue", name: property.label, value: property.value })) }, { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: siteUrl }, { "@type": "ListItem", position: 2, name: "Products", item: `${siteUrl}/products` }, { "@type": "ListItem", position: 3, name: product.name, item: `${siteUrl}/products/${product.slug}` }] }] };
   return <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
     <section className="relative isolate overflow-hidden bg-[#0b2239] py-8 text-white sm:py-10 lg:py-12">
       <div className="grid-fade absolute inset-0 opacity-35" />
       <div className="absolute -right-10 top-0 h-full w-[50%] overflow-hidden text-[#16943e]/30"><TechnicalGraphic variant={graphic} className="absolute right-[-4rem] top-1/2 w-[38rem] -translate-y-1/2" /></div>

@@ -6,14 +6,17 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Button } from "@/components/Button";
 import { TechnicalGraphic } from "@/components/TechnicalGraphic";
 import { getProgram, programs } from "@/data/programs";
+import { pageMetadata, siteUrl } from "@/lib/seo";
 
 export function generateStaticParams() { return programs.map(({ slug }) => ({ slug })); }
-export function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { return params.then(({ slug }) => { const item = getProgram(slug); return item ? { title: item.name, description: item.description } : {}; }); }
+export function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { return params.then(({ slug }) => { const item = getProgram(slug); return item ? pageMetadata(`${item.name} Chemical Programme`, item.description, `/programs/${item.slug}`) : {}; }); }
 
 export default async function ProgramPage({ params }: { params: Promise<{ slug: string }> }) {
   const program = getProgram((await params).slug); if (!program) notFound();
   const isFibre = program.slug === "fibramax";
+  const structuredData = { "@context": "https://schema.org", "@graph": [{ "@type": "Service", name: `${program.name} — ${program.label}`, description: program.description, url: `${siteUrl}/programs/${program.slug}`, serviceType: "Pulp and paper chemical programme", provider: { "@id": `${siteUrl}/#organization` }, areaServed: "IN" }, { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: siteUrl }, { "@type": "ListItem", position: 2, name: "Programmes", item: `${siteUrl}/programs` }, { "@type": "ListItem", position: 3, name: program.name, item: `${siteUrl}/programs/${program.slug}` }] }] };
   return <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
     <section className="relative isolate overflow-hidden bg-[#0b2239] py-9 text-white sm:py-12 lg:py-16">
       <div className="grid-fade absolute inset-0 opacity-35" /><div className="absolute -right-10 top-0 h-full w-[57%] overflow-hidden text-[#16943e]/30"><TechnicalGraphic variant={isFibre ? "fibre" : "program"} className="absolute right-[-4rem] top-1/2 w-[45rem] -translate-y-1/2" /></div>
       <Container className="relative"><Breadcrumbs items={[{ label: "Programs", href: "/programs" }, { label: program.name }]} /><div className="mt-12 grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end"><div className="max-w-4xl"><p className="tech-label text-[#b7d7bd]">{program.eyebrow}</p><h1 className="mt-4 text-5xl font-bold tracking-[-.065em] sm:text-6xl lg:text-7xl">{program.name}</h1><p className="mt-3 text-lg font-medium text-[#b7d7bd] sm:text-xl">{program.label}</p><p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">{program.description}</p></div><div className="border-l border-white/20 pl-6 lg:mb-1"><p className="text-xs font-bold uppercase tracking-[.12em] text-[#b7d7bd]">Maven signature programme</p><p className="mt-3 max-w-xs text-sm leading-6 text-slate-300">A field-led technical approach shaped around the operating conditions of your process.</p></div></div></Container>

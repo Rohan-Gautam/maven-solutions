@@ -1,7 +1,8 @@
 import { Metadata } from "next";
 import { ArrowDownToLine, FileText, Files, FlaskConical } from "lucide-react";
 import { Container } from "@/components/Container";
-export const metadata: Metadata = { title: "Technical Resources" };
+import { pageMetadata } from "@/lib/seo";
+export const metadata: Metadata = pageMetadata("Chemical Technical Resources", "Download Maven Solutions product data sheets, programme literature and company information for pulp and paper chemical evaluation.", "/technical-resources");
 const resources = [
   { title: "Maven Solutions Technical Data Sheets", type: "Product technical data", copy: "Nine technical product profiles covering process water, retention, ETP, sizing and starch applications.", href: "/resources/maven-technical-data-sheets.pdf", mark: "01" },
   { title: "REDRAMAX Program", type: "Programme information", copy: "Advance retention and drainage programme information, including programme components and evaluation approach.", href: "/resources/redramax-program.pdf", mark: "02" },
