@@ -12,5 +12,6 @@ export const navigation = [
   { href: "/about", label: "About" },
   { href: "/solutions", label: "Solutions" },
   { href: "/become-a-reseller", label: "Become an Authorized Reseller" },
+  { href: "/careers", label: "Careers" },
   { href: "/contact", label: "Contact" },
 ];
