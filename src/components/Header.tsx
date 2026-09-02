@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Search } from "lucide-react";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { navigation } from "@/data/company";
@@ -53,9 +53,14 @@ export function Header() {
             );
           })}
         </nav>
-        <Link href="/contact" className="hidden min-h-11 items-center rounded-md bg-[#1769aa] px-4 text-[.95rem] font-bold text-white shadow-sm transition duration-200 hover:-translate-y-px hover:bg-[#102a43] hover:shadow-md active:translate-y-0 active:scale-[.98] xl:inline-flex">
-          Technical Enquiry
-        </Link>
+        <div className="hidden items-center gap-5 xl:flex">
+          <Link href="/products" aria-label="Search Products" className={`transition duration-200 active:scale-[.96] ${isTransparent ? "text-white hover:text-white/80" : "text-[#102a43] hover:text-[#1769aa]"}`}>
+            <Search size={22} />
+          </Link>
+          <Link href="/contact" className="inline-flex min-h-11 items-center rounded-md bg-[#1769aa] px-4 text-[.95rem] font-bold text-white shadow-sm transition duration-200 hover:-translate-y-px hover:bg-[#102a43] hover:shadow-md active:translate-y-0 active:scale-[.98]">
+            Technical Enquiry
+          </Link>
+        </div>
         <button type="button" className={`grid h-11 w-11 place-items-center rounded-md transition duration-200 active:scale-[.96] xl:hidden ${isTransparent ? "text-white hover:bg-white/10" : "text-[#17212b] hover:bg-[#eef3f5]"}`} aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} onClick={() => setOpen(!open)}>
           {open ? <X /> : <Menu />}
         </button>
@@ -71,9 +76,14 @@ export function Header() {
                 </Link>
               );
             })}
-            <Link href="/contact" className="mt-3 inline-flex min-h-11 items-center justify-center rounded-md bg-[#1769aa] px-4 font-bold text-white transition active:scale-[.98]" onClick={() => setOpen(false)}>
-              Technical Enquiry
-            </Link>
+            <div className="mt-3 flex gap-2">
+              <Link href="/products" className="inline-flex min-h-11 w-11 items-center justify-center rounded-md border border-[#d8e0e5] bg-white text-[#17212b] transition active:scale-[.98]" aria-label="Search Products" onClick={() => setOpen(false)}>
+                <Search size={20} />
+              </Link>
+              <Link href="/contact" className="inline-flex min-h-11 flex-1 items-center justify-center rounded-md bg-[#1769aa] px-4 font-bold text-white transition active:scale-[.98]" onClick={() => setOpen(false)}>
+                Technical Enquiry
+              </Link>
+            </div>
           </div>
         </nav>
       )}
