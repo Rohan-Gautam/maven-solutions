@@ -11,7 +11,6 @@ export const company = {
 export const navigation = [
   { href: "/about", label: "About" },
   { href: "/solutions", label: "Solutions" },
-  { href: "/programs", label: "Programs" },
   { href: "/become-a-reseller", label: "Become an Authorized Reseller" },
   { href: "/contact", label: "Contact" },
 ];
