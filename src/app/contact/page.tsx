@@ -40,8 +40,7 @@ export default function Contact() {
                         </div>
                         <div className="flex gap-3"><Phone className="shrink-0 text-[#16943e]" size={19}/>
                             <div><p className="font-bold text-slate-900">Telephone</p><a
-                                className="block hover:text-[#0753b5]" href="tel:+919897788735">+91 9897788735</a><a
-                                className="block hover:text-[#0753b5]" href="tel:+918477050005">+91 8477050005</a></div>
+                                className="block hover:text-[#0753b5]" href="tel:+918477050005">+91 84770 50005</a></div>
                         </div>
                         <div className="flex gap-3"><MapPin className="shrink-0 text-[#16943e]" size={19}/>
                             <div><p className="font-bold text-slate-900">Head Office</p><p>{company.headOffice}</p><p

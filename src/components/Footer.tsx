@@ -1,7 +1,36 @@
 import Link from "next/link";
-import { ArrowUpRight, Mail, Phone } from "lucide-react";
-import { company, navigation } from "@/data/company";
-import { Logo } from "./Logo";
-import { Container } from "./Container";
+import {ArrowUpRight, Mail, Phone} from "lucide-react";
+import {company, navigation} from "@/data/company";
+import {FooterLogo} from "./FooterLogo";
+import {Container} from "./Container";
 
-export function Footer() { return <footer className="bg-[#0b2239] text-white"><Container className="py-14 sm:py-16"><div className="grid gap-12 lg:grid-cols-[1.3fr_.7fr_1fr]"><div><Logo light /><p className="mt-6 max-w-sm text-base leading-7 text-slate-300">Specialty chemistry and technical programs for paper manufacturing. Built around practical process understanding.</p><Link href="/contact" className="mt-6 inline-flex min-h-11 items-center gap-2 text-base font-bold text-[#b7d7bd] hover:text-white">Speak with Maven <ArrowUpRight size={16} /></Link></div><div><p className="footer-label">Explore</p><ul className="mt-4 space-y-2">{navigation.map((item) => <li key={item.href}><Link className="inline-flex min-h-8 items-center text-base text-slate-300 transition hover:text-white" href={item.href}>{item.label}</Link></li>)}<li><Link className="inline-flex min-h-8 items-center text-base text-slate-300 transition hover:text-white" href="/careers">Careers</Link></li></ul></div><div><p className="footer-label">Technical enquiries</p><a className="mt-4 flex items-center gap-2 text-base text-slate-300 hover:text-white" href={`mailto:${company.email}`}><Mail size={17} />{company.email}</a><a className="mt-3 flex items-center gap-2 text-base text-slate-300 hover:text-white" href="tel:+919897788735"><Phone size={17} />{company.phones[0]}</a><p className="mt-5 max-w-xs text-base leading-7 text-slate-300">Head Office<br />{company.headOffice}</p></div></div><div className="mt-12 border-t border-white/10 pt-5 text-sm text-slate-400">© {new Date().getFullYear()} Maven Solutions. All rights reserved.</div></Container></footer>; }
+export function Footer() {
+    return <footer className="bg-[#0b2239] text-white"><Container className="py-14 sm:py-16">
+        <div className="grid gap-12 lg:grid-cols-[1.3fr_.7fr_1fr]">
+            <div><FooterLogo/><p className="mt-6 max-w-sm text-base leading-7 text-slate-300">Specialty chemistry and
+                technical programs for paper manufacturing. Built around practical process understanding.</p><Link
+                href="/contact"
+                className="mt-6 inline-flex min-h-11 items-center gap-2 text-base font-bold text-[#b7d7bd] hover:text-white">Speak
+                with Maven <ArrowUpRight size={16}/></Link></div>
+            <div><p className="footer-label">Explore</p>
+                <ul className="mt-4 space-y-2">{navigation.map((item) => <li key={item.href}><Link
+                    className="inline-flex min-h-8 items-center text-base text-slate-300 transition hover:text-white"
+                    href={item.href}>{item.label}</Link></li>)}
+                    <li><Link
+                        className="inline-flex min-h-8 items-center text-base text-slate-300 transition hover:text-white"
+                        href="/careers">Careers</Link></li>
+                </ul>
+            </div>
+            <div><p className="footer-label">Technical enquiries</p><a
+                className="mt-4 flex items-center gap-2 text-base text-slate-300 hover:text-white"
+                href={`mailto:${company.email}`}><Mail size={17}/>{company.email}</a><a
+                className="mt-3 flex items-center gap-2 text-base text-slate-300 hover:text-white"
+                href="tel:+918477050005"><Phone size={17}/>{company.phones[0]}</a><p
+                className="mt-5 max-w-xs text-base leading-7 text-slate-300">Head Office<br/>{company.headOffice}</p>
+            </div>
+        </div>
+        <div className="mt-12 border-t border-white/10 pt-5 text-sm text-slate-400">© {new Date().getFullYear()} Maven
+            Solutions. All rights reserved.
+        </div>
+    </Container></footer>;
+}
