@@ -13,6 +13,6 @@ export const navigation = [
   { href: "/solutions", label: "Solutions" },
   { href: "/products", label: "Products" },
   { href: "/programs", label: "Programs" },
-  { href: "/technical-resources", label: "Technical Resources" },
+  { href: "/Become an Authorized Reseller", label: "Become an Authorized Reseller" },
   { href: "/contact", label: "Contact" },
 ];
