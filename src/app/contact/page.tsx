@@ -1,8 +1,42 @@
-import { Metadata } from "next";
-import { Mail, MapPin, Phone } from "lucide-react";
-import { Container } from "@/components/Container";
-import { ContactForm } from "@/components/ContactForm";
-import { company } from "@/data/company";
-import { pageMetadata } from "@/lib/seo";
+import {Metadata} from "next";
+import {Mail, MapPin, Phone} from "lucide-react";
+import {Container} from "@/components/Container";
+import {ContactForm} from "@/components/ContactForm";
+import {company} from "@/data/company";
+import {pageMetadata} from "@/lib/seo";
+
 export const metadata: Metadata = pageMetadata("Contact Maven Solutions India", "Contact Maven Solutions for a technical enquiry about pulp and paper process chemicals, retention, drainage, recovery and sizing.", "/contact");
-export default function Contact() { return <><section className="bg-[#061a37] py-20 text-white sm:py-28"><Container><p className="eyebrow text-[#8be1a5]">Technical enquiry</p><h1 className="mt-3 max-w-4xl text-5xl font-bold tracking-[-.07em] sm:text-6xl">Bring us the process challenge.</h1><p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">Tell Maven about your paper grade, system conditions or chemistry requirement. We’ll help direct the conversation to the right technical area.</p></Container></section><section className="py-16 sm:py-24"><Container><div className="grid gap-12 lg:grid-cols-[.78fr_1.22fr]"><aside><p className="eyebrow">Contact details</p><h2 className="mt-4 text-3xl font-bold tracking-[-.05em] text-slate-950">Speak with Maven Solutions</h2><div className="mt-9 space-y-7 text-sm leading-6 text-slate-600"><div className="flex gap-3"><Mail className="shrink-0 text-[#16943e]" size={19} /><div><p className="font-bold text-slate-900">Email</p><a className="hover:text-[#0753b5]" href={`mailto:${company.email}`}>{company.email}</a></div></div><div className="flex gap-3"><Phone className="shrink-0 text-[#16943e]" size={19} /><div><p className="font-bold text-slate-900">Telephone</p><a className="block hover:text-[#0753b5]" href="tel:+919897788735">+91 9897788735</a><a className="block hover:text-[#0753b5]" href="tel:+918477050005">+91 8477050005</a></div></div><div className="flex gap-3"><MapPin className="shrink-0 text-[#16943e]" size={19} /><div><p className="font-bold text-slate-900">Head Office</p><p>{company.headOffice}</p><p className="mt-4 font-bold text-slate-900">Marketing Office</p><p>{company.marketingOffice}</p></div></div></div></aside><ContactForm /></div></Container></section></>; }
+export default function Contact() {
+    return <>
+        <section className="bg-[#061a37] py-20 text-white sm:py-28"><Container><p
+            className="eyebrow text-[#8be1a5]">Technical enquiry</p><h1
+            className="mt-3 max-w-4xl text-5xl font-bold tracking-[-.07em] sm:text-6xl">Bring us the process
+            challenge.</h1><p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">Tell Maven about your paper
+            grade, system conditions or chemistry requirement. We’ll help direct the conversation to the right technical
+            area.</p></Container></section>
+        <section className="py-16 sm:py-24"><Container>
+            <div className="grid gap-12 lg:grid-cols-[.78fr_1.22fr]">
+                <aside><p className="eyebrow">Contact details</p><h2
+                    className="mt-4 text-3xl font-bold tracking-[-.05em] text-slate-950">Speak with Maven Solutions</h2>
+                    <div className="mt-9 space-y-7 text-sm leading-6 text-slate-600">
+                        <div className="flex gap-3"><Mail className="shrink-0 text-[#16943e]" size={19}/>
+                            <div><p className="font-bold text-slate-900">Email</p><a className="hover:text-[#0753b5]"
+                                                                                     href={`mailto:${company.email}`}>{company.email}</a>
+                            </div>
+                        </div>
+                        <div className="flex gap-3"><Phone className="shrink-0 text-[#16943e]" size={19}/>
+                            <div><p className="font-bold text-slate-900">Telephone</p><a
+                                className="block hover:text-[#0753b5]" href="tel:+919897788735">+91 9897788735</a><a
+                                className="block hover:text-[#0753b5]" href="tel:+918477050005">+91 8477050005</a></div>
+                        </div>
+                        <div className="flex gap-3"><MapPin className="shrink-0 text-[#16943e]" size={19}/>
+                            <div><p className="font-bold text-slate-900">Head Office</p><p>{company.headOffice}</p><p
+                                className="mt-4 font-bold text-slate-900">Marketing Office</p>
+                                <p>{company.marketingOffice}</p></div>
+                        </div>
+                    </div>
+                </aside>
+                <ContactForm/></div>
+        </Container></section>
+    </>;
+}

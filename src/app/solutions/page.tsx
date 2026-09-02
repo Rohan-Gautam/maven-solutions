@@ -1,4 +1,5 @@
 import {Metadata} from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {ArrowRight, Droplets, Network, ScanLine, Layers} from "lucide-react";
 import {Container} from "@/components/Container";
@@ -34,11 +35,25 @@ const sections = [{
 }];
 export default function Solutions() {
     return <>
-        <section className="bg-[#f4f8fc] py-20 sm:py-28"><Container><p className="eyebrow">Solutions</p><h1
-            className="mt-3 max-w-4xl text-5xl font-bold tracking-[-.07em] text-slate-950 sm:text-6xl">Find chemistry by
-            the problem you need to solve.</h1><p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">Maven’s
-            products and programs are organised around paper-machine requirements, rather than product codes alone.</p>
-        </Container></section>
+        <section className="relative isolate flex min-h-[400px] items-center overflow-hidden bg-[#0b2239] py-12 text-white sm:py-16 lg:min-h-[480px] lg:py-20">
+            <div className="grid-fade absolute inset-0 opacity-35" />
+            <div className="absolute inset-0 w-full overflow-hidden lg:inset-y-0 lg:left-auto lg:right-0 lg:w-[60%] z-0">
+                <Image src="/images/brand/solutions.webp" alt="Maven Solutions" fill sizes="(min-width: 1024px) 60vw, 100vw" className="object-cover object-center lg:object-left" priority />
+                <div className="absolute inset-0 bg-[#0b2239]/85 lg:hidden" />
+                <div className="absolute inset-0 hidden bg-gradient-to-r from-[#0b2239] via-[#0b2239]/40 to-[#0b2239]/10 lg:block" />
+            </div>
+            <Container className="relative z-10">
+                <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
+                    <div className="max-w-4xl">
+                        <p className="tech-label text-[#b7d7bd]">Solutions</p>
+                        <h1 className="mt-4 text-5xl font-bold tracking-[-.065em] sm:text-6xl lg:text-7xl">Find chemistry by the problem you need to solve.</h1>
+                        <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">
+                            Maven’s products and programs are organised around paper-machine requirements, rather than product codes alone.
+                        </p>
+                    </div>
+                </div>
+            </Container>
+        </section>
         <div className="py-8"><Container>
             <div className="flex flex-wrap gap-3">{sections.map((section) => <a key={section.id}
                                                                                           className="inline-flex items-center rounded-full border border-[#0753b5]/10 bg-[#0753b5]/5 px-5 py-2.5 text-sm font-bold text-[#0753b5] shadow-[0_2px_10px_-3px_rgba(7,83,181,0.1)] backdrop-blur-md transition-all hover:-translate-y-0.5 hover:bg-[#0753b5]/10 hover:text-[#16943e] hover:shadow-[0_4px_12px_-3px_rgba(7,83,181,0.15)]"
