@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="mavenGradient" x1="8" y1="56" x2="56" y2="8"
+                        gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#0066FF"/>
+            <stop offset="50%" stop-color="#00C9FF"/>
+            <stop offset="100%" stop-color="#00E676"/>
+        </linearGradient>
+    </defs>
+
+    <!-- Bold Maven M -->
+    <path
+            d="
+      M8 52
+      V16
+      C8 12.7 10.7 10 14 10
+      C16.2 10 18.2 11.1 19.5 13
+      L32 31
+      L44.5 13
+      C45.8 11.1 47.8 10 50 10
+      C53.3 10 56 12.7 56 16
+      V52
+      H44
+      V28
+      L36.9 39
+      C34.5 42.7 29.5 42.7 27.1 39
+      L20 28
+      V52
+      H8
+      Z
+    "
+            fill="url(#mavenGradient)"
+    />
+</svg>
