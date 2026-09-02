@@ -1,4 +1,5 @@
 import {Metadata} from "next";
+import Image from "next/image";
 import {Mail, MapPin, Phone} from "lucide-react";
 import {Container} from "@/components/Container";
 import {ContactForm} from "@/components/ContactForm";
@@ -8,12 +9,25 @@ import {pageMetadata} from "@/lib/seo";
 export const metadata: Metadata = pageMetadata("Contact Maven Solutions India", "Contact Maven Solutions for a technical enquiry about pulp and paper process chemicals, retention, drainage, recovery and sizing.", "/contact");
 export default function Contact() {
     return <>
-        <section className="bg-[#061a37] py-20 text-white sm:py-28"><Container><p
-            className="eyebrow text-[#8be1a5]">Technical enquiry</p><h1
-            className="mt-3 max-w-4xl text-5xl font-bold tracking-[-.07em] sm:text-6xl">Bring us the process
-            challenge.</h1><p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">Tell Maven about your paper
-            grade, system conditions or chemistry requirement. We’ll help direct the conversation to the right technical
-            area.</p></Container></section>
+        <section className="relative isolate flex min-h-[400px] items-center overflow-hidden bg-[#0b2239] py-12 text-white sm:py-16 lg:min-h-[480px] lg:py-20">
+            <div className="grid-fade absolute inset-0 opacity-35" />
+            <div className="absolute inset-0 w-full overflow-hidden lg:inset-y-0 lg:left-auto lg:right-0 lg:w-[60%] z-0">
+                <Image src="/images/brand/contact.png" alt="Contact Maven Solutions" fill sizes="(min-width: 1024px) 60vw, 100vw" className="object-cover object-center lg:object-left" priority />
+                <div className="absolute inset-0 bg-[#0b2239]/85 lg:hidden" />
+                <div className="absolute inset-0 hidden bg-gradient-to-r from-[#0b2239] via-[#0b2239]/40 to-[#0b2239]/10 lg:block" />
+            </div>
+            <Container className="relative z-10">
+                <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
+                    <div className="max-w-4xl">
+                        <p className="tech-label text-[#b7d7bd]">Technical enquiry</p>
+                        <h1 className="mt-4 text-5xl font-bold tracking-[-.065em] sm:text-6xl lg:text-7xl">Bring us the process challenge.</h1>
+                        <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">
+                            Tell Maven about your paper grade, system conditions or chemistry requirement. We’ll help direct the conversation to the right technical area.
+                        </p>
+                    </div>
+                </div>
+            </Container>
+        </section>
         <section className="py-16 sm:py-24"><Container>
             <div className="grid gap-12 lg:grid-cols-[.78fr_1.22fr]">
                 <aside><p className="eyebrow">Contact details</p><h2

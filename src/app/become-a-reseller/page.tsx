@@ -33,7 +33,7 @@ export default function BecomeAReseller() {
           <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
             <div className="max-w-4xl">
               <p className="tech-label text-[#b7d7bd]">Partnership Opportunity</p>
-              <h1 className="mt-4 text-5xl font-bold tracking-[-.065em] sm:text-6xl lg:text-7xl">Grow with Maven Solutions.</h1>
+              <h1 className="mt-4 text-5xl font-bold tracking-[-.065em] sm:text-6xl lg:text-7xl">Grow with Maven <br />Solutions.</h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">
                 Join our network of authorized resellers and bring cutting-edge, practical specialty chemistry to pulp and paper manufacturers worldwide.
               </p>
