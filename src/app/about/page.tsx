@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Check, Compass, Leaf, Users } from "lucide-react";
 import { Container } from "@/components/Container";
 import { Button } from "@/components/Button";
+import { Logo } from "@/components/Logo";
 import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata("About Maven", "Learn about Maven Solutions, an India-based provider of practical specialty chemical programmes for pulp and paper manufacturing.", "/about");
 const values = ["Customised chemistry for every client", "Technically equipped staff for analysing problems", "Strategic planning for undisturbed execution", "Sustainable and cost-effective solutions", "Technically advanced data-tabulation systems", "A wide range of exclusive products"];
@@ -77,10 +78,21 @@ export default function About() {
               </p>
             ))}
           </div>
-          <div className="mt-16 rounded-lg border-l-4 border-[#16943e] bg-[#061a37] p-8 text-white shadow-sm sm:p-10">
-            <p className="text-2xl font-bold tracking-[-.04em]">Chemistry Simplified.</p>
-            <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-300">A direct, process-aware partnership for pulp and paper production.</p>
-            <Button href="/contact" variant="light" className="mt-7">Contact Maven</Button>
+          <div className="mt-16 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm sm:p-12 lg:p-16">
+            <h2 className="text-3xl font-bold tracking-[-.05em] text-[#0753b5] sm:text-4xl">
+              Chemistry <span className="text-[#16943e]">Simplified.</span>
+            </h2>
+            <div className="mt-8 space-y-6 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
+              <p>
+                We believe that strong partnerships are built on collaboration, transparency and shared objectives. Partnering with Maven ensures a dedicated and solution-oriented approach focused on creating long-term value for our customers.
+              </p>
+              <p>
+                With our exclusive, solution-oriented and cost-effective chemical technologies, we work closely with paper mills to improve process efficiency, optimize chemical consumption and deliver consistent performance.
+              </p>
+            </div>
+            <p className="mt-8 text-lg font-bold text-slate-800 sm:text-xl">
+              Towards A Better Future.
+            </p>
           </div>
         </Container>
       </section>
