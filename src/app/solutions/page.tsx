@@ -15,11 +15,17 @@ const sections = [{
     icon: Network,
     categories: ["Retention & Drainage"]
 }, {
+    id: "filler-programmes",
+    title: "Specialised filler programmes",
+    copy: "Novel filler technology designed to provide up to 100% filler retention while maintaining the strength properties of paper.",
+    icon: Layers,
+    programmes: programs.filter(p => p.slug.startsWith("filmax"))
+}, {
     id: "programmes",
     title: "Our specialised programmes",
     copy: "Maven’s flagship programmes combine chemistry, application guidance and technical evaluation into a practical operating approach.",
     icon: Layers,
-    programmes: programs
+    programmes: programs.filter(p => !p.slug.startsWith("filmax"))
 }, {
     id: "water",
     title: "Manage process water & recovery",
