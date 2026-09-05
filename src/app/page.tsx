@@ -232,7 +232,7 @@ export default function Home() {
                             <p className="text-[0.7rem] font-bold tracking-[0.15em] text-slate-500 mb-3">OUR PRODUCTS</p>
                             <h2 className="text-3xl sm:text-[2.25rem] font-bold tracking-tight text-[#0B2B45]">Focused chemistry for real results.</h2>
                         </div>
-                        <Link href="/products" className="inline-flex items-center text-[0.85rem] font-bold text-[#0B2B45] hover:text-[#2E9FB0] transition-colors pb-2">
+                        <Link href="/solutions" className="inline-flex items-center text-[0.85rem] font-bold text-[#0B2B45] hover:text-[#2E9FB0] transition-colors pb-2">
                             View All Products <ArrowRight size={16} className="ml-1" />
                         </Link>
                     </div>
