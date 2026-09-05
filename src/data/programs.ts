@@ -36,7 +36,11 @@ export const programs: Program[] = [
     applications: ["Kraft and board industries", "Refining Chest / Mixing chest / Machine chest"],
     properties: [{label: "Appearance", value: "Yellowish to Brown Free Flow Powder"}, {label: "Ionic charge", value: "Cationic"}, {label: "pH", value: "Alkaline"}, {label: "Moisture", value: ">=8%"}, {label: "Shelf life", value: "12 Months"}],
     applicationMethod: ["Preparation tank of 3-5 m3 capacity with adequate agitator for preparing FILMAX Filler slurry", "Service tank of 3-5 m3 capacity with adequate agitator along with dosing pump having capacity of 1000 - 2000LPH"],
-    resource: "/resources/filmax.pdf"
+    resource: "/resources/filmax.pdf",
+    videos: [
+      { title: "Preparation", src: "https://www.youtube.com/embed/dQw4w9WgXcQ?vq=hd1080" },
+      { title: "Running Program", src: "https://www.youtube.com/embed/dQw4w9WgXcQ?vq=hd1080" }
+    ]
   },
   {
     slug: "filmax-plus", name: "FILMAX PLUS+", label: "Novel Filler Technology Program", eyebrow: "Filler technology / Up to 100% Retention",

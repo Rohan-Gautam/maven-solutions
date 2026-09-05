@@ -29,4 +29,5 @@ export type Program = {
   properties?: TechnicalProperty[];
   applicationMethod?: string[];
   resource: string;
+  videos?: { title: string; src: string }[];
 };
