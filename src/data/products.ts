@@ -81,6 +81,15 @@ export const products: Product[] = [
     applications: ["Paper-making process", "Mixing chest or machine chest (preferred)"],
     properties: [{ label: "Appearance", value: "Free-flowing white powder" }, { label: "Ionic charge", value: "Anionic" }, { label: "pH", value: "Acidic" }, { label: "Shelf life", value: "9 months" }],
     handling: ["Store away from direct sunlight and moisture.", "Available in 25 kg imported paper bags."], relatedProducts: ["ms-cra04", "ms-cra-plus", "ms-rb211"], source: "Maven Solutions - Technical Data Sheets.pdf"
+  },
+  {
+    slug: "ms-bentonite", code: "MS-BENTONITE", name: "Bentonite Powder", category: "Retention & Drainage",
+    shortDescription: "Instant hydrating extended sodium alumino silicate for sticky and deposit control.",
+    description: "It is characterised by high ion-exchange-capacity and extremely high active surface area in aqueous dispersions as a carrier of both negative and positive charge. MS-BENTONITE POWDER has properties for dispersion and absorption of filler/fiber complexes and colloidal particles, contributing to better drainage and acting as an effective additive for sticky and deposit control.",
+    benefits: ["Prevents CaCO3 and Mg(OH)2 precipitation by binding free Ca2+ and Mg2+", "Works as a coagulant aid in combination with PAC, alum, or cationic polymers", "Effectively adsorbs stickies, pitch, resins, and anionic trash", "Improves water drainage, leading to higher dewatering efficiency and faster machine speeds"],
+    applications: ["Paper making process", "Wet-end system"],
+    properties: [{ label: "Appearance", value: "Yellowish to Brown Free Flow Powder" }, { label: "Mesh Passing", value: "150 - 200" }, { label: "Moisture", value: "<= 12%" }, { label: "pH", value: "Alkaline" }],
+    handling: ["Store away from moisture and direct sunlight.", "Packed in 25KG bags."], relatedProducts: ["ms-rb211", "ms-cra04", "ms-ara08"], source: "Product Profile for MS - Bentonite Powder.pdf"
   }
 ];
 
