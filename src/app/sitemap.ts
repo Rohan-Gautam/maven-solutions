@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/solutions", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/products", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/programs", priority: 0.8, changeFrequency: "monthly" as const },
-    { path: "/TCMP", priority: 0.8, changeFrequency: "monthly" as const },
+    { path: "/tcmp", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/become-a-reseller", priority: 0.5, changeFrequency: "yearly" as const },
     { path: "/careers", priority: 0.5, changeFrequency: "yearly" as const },
     { path: "/contact", priority: 0.5, changeFrequency: "yearly" as const },
