@@ -163,7 +163,7 @@ export default function Home() {
                 <Container>
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-14">
                         <p className="text-[0.7rem] font-bold tracking-[0.15em] text-[#0B2B45]">WHAT ARE YOU TRYING TO IMPROVE?</p>
-                        <p className="text-[0.85rem] text-slate-500">Different mills. Different challenges. A stronger tomorrow.</p>
+                        <p className="text-[0.85rem] text-slate-500">Different mills | Different challenges | A stronger tomorrow.</p>
                     </div>
                     <div className="flex flex-wrap justify-center gap-x-8 gap-y-12 sm:justify-between text-center max-w-5xl mx-auto">
                         {[
