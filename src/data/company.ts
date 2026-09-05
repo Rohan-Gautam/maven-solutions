@@ -11,6 +11,7 @@ export const company = {
 export const navigation = [
   { href: "/about", label: "About" },
   { href: "/solutions", label: "Solutions" },
+  { href: "/TCMP", label: "TCMP" },
   { href: "/become-a-reseller", label: "Become an Authorized Reseller" },
   { href: "/careers", label: "Careers" },
   { href: "/contact", label: "Contact" },
