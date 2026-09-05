@@ -57,15 +57,15 @@ export default function Home() {
                             </Button>
                         </div>
                         <div className="mt-14 flex flex-wrap items-center gap-x-4 gap-y-3 text-[0.65rem] font-bold tracking-[0.2em] text-[#0B2B45]">
-                            <span>RETENTION</span>
+                            <Link href="/solutions#retention" className="hover:text-[#2E9FB0] transition-colors">RETENTION</Link>
                             <span className="w-px h-3 bg-slate-300"></span>
-                            <span>DRAINAGE</span>
+                            <Link href="/solutions#retention" className="hover:text-[#2E9FB0] transition-colors">DRAINAGE</Link>
                             <span className="w-px h-3 bg-slate-300"></span>
-                            <span>STARCH</span>
+                            <Link href="/solutions#sizing" className="hover:text-[#2E9FB0] transition-colors">STARCH</Link>
                             <span className="w-px h-3 bg-slate-300"></span>
-                            <span>PROCESS WATER</span>
+                            <Link href="/solutions#water" className="hover:text-[#2E9FB0] transition-colors">PROCESS WATER</Link>
                             <span className="w-px h-3 bg-slate-300"></span>
-                            <span>ETP</span>
+                            <Link href="/solutions#water" className="hover:text-[#2E9FB0] transition-colors">ETP</Link>
                         </div>
                     </div>
                 </Container>
@@ -172,20 +172,20 @@ export default function Home() {
                     </div>
                     <div className="flex flex-wrap justify-center gap-x-8 gap-y-12 sm:justify-between text-center max-w-5xl mx-auto">
                         {[
-                            { icon: Settings, label: "Retention" },
-                            { icon: Waves, label: "Drainage" },
-                            { icon: Grid, label: "Formation" },
-                            { icon: Layers, label: "Filler" },
-                            { icon: Droplet, label: "Starch" },
-                            { icon: Leaf, label: "Process Water" },
-                            { icon: BarChart3, label: "Cost Efficiency" },
+                            { icon: Settings, label: "Retention", href: "/solutions#retention" },
+                            { icon: Waves, label: "Drainage", href: "/solutions#retention" },
+                            { icon: Grid, label: "Formation", href: "/solutions#retention" },
+                            { icon: Layers, label: "Filler", href: "/solutions#filler-programmes" },
+                            { icon: Droplet, label: "Starch", href: "/solutions#sizing" },
+                            { icon: Leaf, label: "Process Water", href: "/solutions#water" },
+                            { icon: BarChart3, label: "Cost Efficiency", href: "/tcmp" },
                         ].map((item, i) => (
-                            <div key={i} className="flex flex-col items-center gap-4 group cursor-pointer w-24">
+                            <Link href={item.href} key={i} className="flex flex-col items-center gap-4 group cursor-pointer w-24">
                                 <div className="text-[#0B2B45] transition-colors group-hover:text-[#2E9FB0]">
                                     <item.icon size={32} strokeWidth={1.5} />
                                 </div>
-                                <span className="text-[0.8rem] font-bold text-[#0B2B45]">{item.label}</span>
-                            </div>
+                                <span className="text-[0.8rem] font-bold text-[#0B2B45] transition-colors group-hover:text-[#2E9FB0]">{item.label}</span>
+                            </Link>
                         ))}
                     </div>
                 </Container>
@@ -242,7 +242,7 @@ export default function Home() {
                         </Link>
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-                        {products.map((product) => (
+                        {products.slice(0, 4).map((product) => (
                             <Link href={`/products/${product.slug}`} key={product.slug} className="group bg-white flex flex-col rounded-lg overflow-hidden border border-slate-200 transition-all duration-300 hover:border-[#2E9FB0] hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
                                 <div className="relative h-32 sm:h-40 w-full overflow-hidden">
                                     <Image 
