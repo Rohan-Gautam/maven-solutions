@@ -24,8 +24,8 @@ export default function Home() {
     return (
         <>
             {/* Section 1 - Hero */}
-            <section className="relative overflow-hidden bg-white pt-24 pb-16 sm:pt-32 sm:pb-24 lg:pb-32">
-                <div className="absolute right-0 top-0 h-full w-full lg:w-[55%]">
+            <section className="relative overflow-hidden bg-[#0B2B45] pt-24 pb-16 sm:pt-32 sm:pb-24 lg:pb-32">
+                <div className="absolute right-0 top-0 h-full w-full">
                     <Image
                         src="/images/hero.png"
                         alt="Paper machine"
@@ -33,38 +33,38 @@ export default function Home() {
                         className="object-cover object-[20%_center]"
                         priority
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-transparent lg:via-white/30" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#0B2B45] via-[#0B2B45]/85 to-[#0B2B45]/30" />
                     <div className="absolute bottom-6 right-6 text-right hidden lg:block">
                         <p className="text-[0.65rem] font-black uppercase tracking-[0.2em] text-white drop-shadow-md">PEOPLE<br/>PROCESS<br/>CHEMISTRY</p>
-                        <p className="mt-1 text-[0.55rem] uppercase tracking-[0.2em] text-slate-200 drop-shadow-md">A STRONGER TOMORROW</p>
+                        <p className="mt-1 text-[0.55rem] uppercase tracking-[0.2em] text-slate-300 drop-shadow-md">A STRONGER TOMORROW</p>
                     </div>
                 </div>
                 <Container className="relative">
                     <div className="max-w-2xl">
-                        <p className="text-xs font-bold tracking-widest text-slate-500 mb-6">SPECIALTY CHEMISTRY FOR THE PAPER INDUSTRY</p>
-                        <h1 className="text-[clamp(3.5rem,6.5vw,7rem)] font-black uppercase leading-[0.85] tracking-[-0.04em] text-[#0B2B45]">
+                        <p className="text-xs font-bold tracking-widest text-[#2E9FB0]/80 mb-6">SPECIALTY CHEMISTRY FOR THE PAPER INDUSTRY</p>
+                        <h1 className="text-[clamp(3.5rem,6.5vw,7rem)] font-black uppercase leading-[0.85] tracking-[-0.04em] text-white">
                             Where Creativity <br></br> <span className="text-[#2E9FB0]">Meets Innovation.</span>
                         </h1>
-                        <p className="mt-8 text-lg leading-8 text-slate-600 max-w-lg font-medium">
+                        <p className="mt-8 text-lg leading-8 text-slate-300 max-w-lg font-medium">
                             Process-focused chemical solutions to improve performance, efficiency and sustainability in your paper mill.
                         </p>
                         <div className="mt-10 flex flex-wrap gap-4">
-                            <Button href="/solutions" className="bg-[#0B2B45] hover:bg-[#0B2B45]/90 text-white rounded-full px-7">
+                            <Button href="/solutions" className="bg-[#2E9FB0] hover:bg-[#2E9FB0]/90 text-white rounded-full px-7">
                                 Explore Solutions <ArrowRight size={16} className="ml-2" />
                             </Button>
-                            <Button href="/contact" variant="secondary" className="border-[#0B2B45] text-[#0B2B45] hover:bg-slate-50 rounded-full px-7">
+                            <Button href="/contact" variant="secondary" className="border-white/40 text-white hover:bg-white/10 rounded-full px-7">
                                 Talk to Maven
                             </Button>
                         </div>
-                        <div className="mt-14 flex flex-wrap items-center gap-x-4 gap-y-3 text-[0.65rem] font-bold tracking-[0.2em] text-[#0B2B45]">
+                        <div className="mt-14 flex flex-wrap items-center gap-x-4 gap-y-3 text-[0.65rem] font-bold tracking-[0.2em] text-slate-400">
                             <Link href="/solutions#retention" className="hover:text-[#2E9FB0] transition-colors">RETENTION</Link>
-                            <span className="w-px h-3 bg-slate-300"></span>
+                            <span className="w-px h-3 bg-white/20"></span>
                             <Link href="/solutions#retention" className="hover:text-[#2E9FB0] transition-colors">DRAINAGE</Link>
-                            <span className="w-px h-3 bg-slate-300"></span>
+                            <span className="w-px h-3 bg-white/20"></span>
                             <Link href="/solutions#sizing" className="hover:text-[#2E9FB0] transition-colors">STARCH</Link>
-                            <span className="w-px h-3 bg-slate-300"></span>
+                            <span className="w-px h-3 bg-white/20"></span>
                             <Link href="/solutions#water" className="hover:text-[#2E9FB0] transition-colors">PROCESS WATER</Link>
-                            <span className="w-px h-3 bg-slate-300"></span>
+                            <span className="w-px h-3 bg-white/20"></span>
                             <Link href="/solutions#water" className="hover:text-[#2E9FB0] transition-colors">ETP</Link>
                         </div>
                     </div>
