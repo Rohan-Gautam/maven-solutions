@@ -84,7 +84,7 @@ export default function TCMP() {
         <Container>
           <div className="grid gap-12 lg:grid-cols-2">
             <div>
-              <p className="eyebrow">Our Objective</p>
+              <p className="eyebrow">About the Program</p>
               <h2 className="mt-3 text-4xl font-bold tracking-[-.06em] text-slate-950">10% Lower Chemical Cost OR 10% Better Chemical Performance</h2>
             </div>
             <div className="space-y-6 text-lg leading-8 text-slate-600">
