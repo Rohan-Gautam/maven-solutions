@@ -14,11 +14,11 @@ import {
     Mail,
     ArrowRight
 } from "lucide-react";
-import {Container} from "@/components/Container";
-import {Button} from "@/components/Button";
-import {products} from "@/data/products";
-import {programs} from "@/data/programs";
-import {company} from "@/data/company";
+import { Container } from "@/components/Container";
+import { Button } from "@/components/Button";
+import { products } from "@/data/products";
+import { programs } from "@/data/programs";
+import { company } from "@/data/company";
 
 export default function Home() {
     return (
@@ -35,7 +35,7 @@ export default function Home() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-[#0B2B45] via-[#0B2B45]/85 to-[#0B2B45]/30" />
                     <div className="absolute bottom-6 right-6 text-right hidden lg:block">
-                        <p className="text-[0.65rem] font-black uppercase tracking-[0.2em] text-white drop-shadow-md">PEOPLE<br/>PROCESS<br/>CHEMISTRY</p>
+                        <p className="text-[0.65rem] font-black uppercase tracking-[0.2em] text-white drop-shadow-md">PEOPLE<br />PROCESS<br />CHEMISTRY</p>
                         <p className="mt-1 text-[0.55rem] uppercase tracking-[0.2em] text-slate-300 drop-shadow-md">A STRONGER TOMORROW</p>
                     </div>
                 </div>
@@ -136,7 +136,7 @@ export default function Home() {
                             <p className="text-lg text-white/80 mb-10 max-w-md leading-relaxed">
                                 A complete, mill-focused approach to managing chemical consumption, performance and process efficiency — built around your machine, not ours.
                             </p>
-                            <Button href="/tcmp" variant="secondary" className="border-white text-white hover:bg-white hover:text-[#091540] rounded-full px-7">
+                            <Button href="/tcmp" className="bg-white text-sky-700 hover:bg-white/90 rounded-full px-7 font-bold">
                                 Explore TCMP <ArrowRight size={16} className="ml-2" />
                             </Button>
                         </div>
@@ -163,7 +163,7 @@ export default function Home() {
                 <Container>
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-14">
                         <p className="text-[0.7rem] font-bold tracking-[0.15em] text-[#0B2B45]">WHAT ARE YOU TRYING TO IMPROVE?</p>
-                        <p className="text-[0.85rem] text-slate-500">Different mills | Different challenges | A stronger tomorrow.</p>
+                        <p className="text-[0.85rem] text-slate-500">Different mills. Different challenges. A stronger tomorrow.</p>
                     </div>
                     <div className="flex flex-wrap justify-center gap-x-8 gap-y-12 sm:justify-between text-center max-w-5xl mx-auto">
                         {[
@@ -240,7 +240,7 @@ export default function Home() {
                         {products.slice(0, 4).map((product) => (
                             <Link href={`/products/${product.slug}`} key={product.slug} className="group bg-white flex flex-col rounded-lg overflow-hidden border border-slate-200 transition-all duration-300 hover:border-[#2E9FB0] hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
                                 <div className="relative h-32 sm:h-40 w-full overflow-hidden">
-                                    <Image 
+                                    <Image
                                         src={`/images/products/${product.slug}.png`}
                                         alt={product.name}
                                         fill
@@ -273,7 +273,7 @@ export default function Home() {
                         {programs.map((program) => (
                             <Link href={`/programs/${program.slug}`} key={program.slug} className="group flex flex-col bg-white rounded-lg overflow-hidden border border-slate-200 transition-all duration-300 hover:border-[#2E9FB0] hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
                                 <div className="relative h-48 w-full overflow-hidden">
-                                    <Image 
+                                    <Image
                                         src={`/images/programs/${program.slug}.png`}
                                         alt={program.name}
                                         fill
