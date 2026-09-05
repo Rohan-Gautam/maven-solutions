@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { ArrowRight, Check, Settings2, Download } from "lucide-react";
 import { Container } from "@/components/Container";
 import { Button } from "@/components/Button";
@@ -18,10 +19,14 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
   
   return <>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-    <section className="relative isolate overflow-hidden bg-[#102a43] py-8 text-white sm:py-10 lg:py-12">
+    <section className="relative isolate flex min-h-[400px] items-center overflow-hidden bg-[#102a43] py-12 text-white sm:py-16 lg:min-h-[480px] lg:py-20">
       <div className="grid-fade absolute inset-0 opacity-35" />
-      <div className="absolute -right-10 top-0 h-full w-[50%] overflow-hidden text-[#1769aa]/30"><TechnicalGraphic variant="program" className="absolute right-[-4rem] top-1/2 w-[38rem] -translate-y-1/2" /></div>
-      <Container className="relative">
+      <div className="absolute inset-0 w-full overflow-hidden lg:inset-y-0 lg:left-auto lg:right-0 lg:w-[60%] z-0">
+        <Image src={`/images/programs/${program.slug}.png`} alt={program.name} fill sizes="(min-width: 1024px) 60vw, 100vw" className="object-cover object-center lg:object-left" priority />
+        <div className="absolute inset-0 bg-[#102a43]/85 lg:hidden" />
+        <div className="absolute inset-0 hidden bg-gradient-to-r from-[#102a43] via-[#102a43]/60 to-[#102a43]/10 lg:block" />
+      </div>
+      <Container className="relative z-10">
         <Breadcrumbs items={[{ label: "Programs", href: "/programs" }, { label: program.name }]} />
         <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
           <div className="max-w-4xl">
@@ -32,7 +37,6 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
             <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-200">{program.label}</p>
           </div>
           <div className="flex gap-4">
-            <Button href={program.resource} variant="light">Download PDF <Download size={16} /></Button>
             <Button href="/contact" variant="primary">Technical Enquiry <ArrowRight size={16} /></Button>
           </div>
         </div>
