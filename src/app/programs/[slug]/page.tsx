@@ -20,7 +20,7 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
     <section className="relative isolate overflow-hidden bg-[#102a43] py-8 text-white sm:py-10 lg:py-12">
       <div className="grid-fade absolute inset-0 opacity-35" />
-      <div className="absolute -right-10 top-0 h-full w-[50%] overflow-hidden text-[#1769aa]/30"><TechnicalGraphic variant="dots" className="absolute right-[-4rem] top-1/2 w-[38rem] -translate-y-1/2" /></div>
+      <div className="absolute -right-10 top-0 h-full w-[50%] overflow-hidden text-[#1769aa]/30"><TechnicalGraphic variant="program" className="absolute right-[-4rem] top-1/2 w-[38rem] -translate-y-1/2" /></div>
       <Container className="relative">
         <Breadcrumbs items={[{ label: "Programs", href: "/programs" }, { label: program.name }]} />
         <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
@@ -75,7 +75,7 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
           
           <aside className="h-fit overflow-hidden border border-slate-200 bg-white shadow-xl shadow-slate-900/[.04]">
             <div className="relative overflow-hidden bg-[#102a43] p-7 text-white">
-              <TechnicalGraphic variant="crosses" className="absolute -right-20 -top-10 h-52 w-80 text-white/20" />
+              <TechnicalGraphic variant="polymer" className="absolute -right-20 -top-10 h-52 w-80 text-white/20" />
               <div className="relative">
                 <p className="tech-label text-[#9ed7d1]">Technical details</p>
                 <h2 className="mt-3 text-2xl font-bold tracking-[-.04em]">Components & Properties</h2>
