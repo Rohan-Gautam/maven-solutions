@@ -130,16 +130,16 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
              <p className="eyebrow">Program Action</p>
              <h2 className="mt-3 text-3xl font-bold tracking-[-.05em] text-slate-950 sm:text-4xl">Watch it in action.</h2>
           </div>
-          <div className="mt-12 grid gap-10 lg:grid-cols-2">
+          <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:gap-14">
             {program.videos.map((video, index) => (
-              <div key={index} className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
+              <div key={index} className="mx-auto w-full max-w-[360px] overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
                 <div className="border-b border-slate-200 bg-[#f8fafb] px-6 py-4">
                   <h3 className="font-bold text-slate-900">{video.title}</h3>
                 </div>
                 <iframe
                   src={video.src}
                   title={video.title}
-                  className="block w-full aspect-video"
+                  className="block w-full aspect-[9/16]"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>

@@ -38,8 +38,8 @@ export const programs: Program[] = [
     applicationMethod: ["Preparation tank of 3-5 m3 capacity with adequate agitator for preparing FILMAX Filler slurry", "Service tank of 3-5 m3 capacity with adequate agitator along with dosing pump having capacity of 1000 - 2000LPH"],
     resource: "/resources/filmax.pdf",
     videos: [
-      { title: "Preparation", src: "https://www.youtube.com/embed/dQw4w9WgXcQ?vq=hd1080" },
-      { title: "Running Program", src: "https://www.youtube.com/embed/dQw4w9WgXcQ?vq=hd1080" }
+      { title: "Preparation", src: "https://www.youtube.com/embed/rYHYFm2bp3g?vq=hd1080" },
+      { title: "Running Program", src: "https://www.youtube.com/embed/r8Cc_bxAcf8?vq=hd1080" }
     ]
   },
   {
@@ -52,10 +52,10 @@ export const programs: Program[] = [
     components: [{name: "FILMAX FILLER", point: "Refining chest", dosage: "Desired quantity"}, {name: "MS-BINDMAX", point: "Refining chest", dosage: "2% of FILMAX FILLER"}],
     applicationMethod: ["Dissolve desired quantity of FILMAX PLUS+ (FILMAX FILLER + MS-BINDMAX [2% of FILMAX FILLER]) in fresh or Treated back water.", "Make a lump free solution in an agitated tank.", "Can be used on a dry basis before refining, ensuring proper mixing."],
     resource: "/resources/filmax-plus.pdf",
-      videos: [
-          { title: "Preparation", src: "https://www.youtube.com/embed/dQw4w9WgXcQ?vq=hd1080" },
-          { title: "Running Program", src: "https://www.youtube.com/embed/dQw4w9WgXcQ?vq=hd1080" }
-      ]
+    videos: [
+      { title: "Preparation", src: "https://www.youtube.com/embed/rYHYFm2bp3g?vq=hd1080" },
+      { title: "Running Program", src: "https://www.youtube.com/embed/r8Cc_bxAcf8?vq=hd1080" }
+    ]
   }
 ];
 
