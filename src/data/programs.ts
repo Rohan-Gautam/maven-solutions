@@ -51,7 +51,11 @@ export const programs: Program[] = [
     applications: ["Kraft and food grade packaging papers", "Refining Chest / Mixing chest / Machine chest"],
     components: [{name: "FILMAX FILLER", point: "Refining chest", dosage: "Desired quantity"}, {name: "MS-BINDMAX", point: "Refining chest", dosage: "2% of FILMAX FILLER"}],
     applicationMethod: ["Dissolve desired quantity of FILMAX PLUS+ (FILMAX FILLER + MS-BINDMAX [2% of FILMAX FILLER]) in fresh or Treated back water.", "Make a lump free solution in an agitated tank.", "Can be used on a dry basis before refining, ensuring proper mixing."],
-    resource: "/resources/filmax-plus.pdf"
+    resource: "/resources/filmax-plus.pdf",
+      videos: [
+          { title: "Preparation", src: "https://www.youtube.com/embed/dQw4w9WgXcQ?vq=hd1080" },
+          { title: "Running Program", src: "https://www.youtube.com/embed/dQw4w9WgXcQ?vq=hd1080" }
+      ]
   }
 ];
 
