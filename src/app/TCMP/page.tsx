@@ -143,7 +143,7 @@ export default function TCMP() {
             </div>
             
             <div className="rounded-2xl border border-slate-200 bg-[#f8fafb] p-8 shadow-sm sm:p-12">
-               <h3 className="text-2xl font-bold tracking-[-.04em] text-[#0753b5]">Our Promise</h3>
+               <h3 className="text-2xl font-bold tracking-[-.04em] text-[#0753b5]">One Partner for Your Chemical Requirements</h3>
                <p className="mt-4 text-slate-600">By consolidating your chemical requirements under Maven Solutions, you can benefit from:</p>
                <div className="mt-8 grid gap-4 sm:grid-cols-2">
                   {benefits.map((benefit) => (
@@ -156,7 +156,24 @@ export default function TCMP() {
                <div className="mt-10 pt-8 border-t border-slate-200">
                   <p className="text-lg font-bold text-slate-900">Your chemicals. Your process. Our responsibility.</p>
                </div>
-            </div>
+             </div>
+          </div>
+        </Container>
+      </section>
+
+      <section className="bg-white pb-20 sm:pb-28">
+        <Container>
+          <div className="mx-auto max-w-4xl rounded-2xl border border-slate-200 bg-[#f8fafb] p-8 text-center shadow-sm sm:p-16">
+             <h2 className="text-3xl font-bold tracking-[-.05em] sm:text-4xl text-[#0753b5]">Our Promise</h2>
+             <div className="mx-auto mt-6 h-1 w-[80%] rounded-full bg-[#16943e]"></div>
+             <div className="mt-8 space-y-6 text-lg leading-8 text-slate-600">
+                <p>Every chemical program has an opportunity for improvement. Maven Solutions brings together chemical expertise, technical support, application knowledge and commercial optimization to unlock that opportunity.</p>
+                <p>Our objective is to become more than your chemical supplier.<br/>We aim to become your Chemical Program Partner.</p>
+                <div className="mt-10 pt-10 border-t border-slate-200">
+                   <p className="font-bold tracking-widest text-sm uppercase text-[#16943e]">Maven Solutions — Total Chemical Program Management</p>
+                   <p className="mt-4 text-2xl font-bold text-slate-900">Your chemicals. Your process. Our responsibility.</p>
+                </div>
+             </div>
           </div>
         </Container>
       </section>
