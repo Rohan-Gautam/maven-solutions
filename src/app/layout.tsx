@@ -7,7 +7,7 @@ import {ogImage, siteUrl} from "@/lib/seo";
 
 export const metadata: Metadata = {
     metadataBase: new URL(siteUrl),
-    title: {default: "Maven Solutions | Pulp & Paper Chemicals India", template: "%s | Maven Solutions"},
+    title: {default: "Maven Solutions | Pulp & Paper Chemicals India", template: "%s | Maven Solutions – Pulp & Paper Chemicals India"},
     description: "Specialty chemical solutions and technical programmes for pulp and paper manufacturing in India.",
     alternates: {canonical: "/"},
     robots: {index: true, follow: true},
@@ -39,12 +39,12 @@ const organizationSchema = {
             url: siteUrl,
             logo: `${siteUrl}${ogImage}`,
             email: company.email,
-            telephone: company.phones[0],
+            telephone: "+91 84770 50005",
             contactPoint: [{
                 "@type": "ContactPoint",
                 contactType: "sales",
                 email: company.email,
-                telephone: company.phones[0],
+                telephone: "+91 84770 50005",
                 areaServed: "IN",
                 availableLanguage: "en"
             }]
@@ -55,11 +55,11 @@ const organizationSchema = {
             name: company.name,
             url: siteUrl,
             email: company.email,
-            telephone: company.phones[0],
+            telephone: "+91 84770 50005",
             address: {
                 "@type": "PostalAddress",
                 streetAddress: "UGF, B-304, Chhattarpur, Chhattarpur Extension",
-                addressLocality: "New Delhi",
+                addressLocality: "South West Delhi",
                 addressRegion: "Delhi",
                 postalCode: "110074",
                 addressCountry: "IN"

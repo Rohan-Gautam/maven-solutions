@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 
-export const siteUrl = "https://www.mavensolutions.in";
+export const siteUrl = "https://www.mavensolutions.co.in";
 export const ogImage = "/opengraph-image";
 
 export function pageMetadata(title: string, description: string, path: string): Metadata {
-  const socialTitle = `${title} | Maven Solutions`;
+  const socialTitle = `${title} | Maven Solutions – Pulp & Paper Chemicals India`;
   return {
     title,
     description,
