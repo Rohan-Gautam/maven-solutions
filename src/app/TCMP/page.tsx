@@ -5,7 +5,7 @@ import { Container } from "@/components/Container";
 import { Button } from "@/components/Button";
 import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = pageMetadata("Total Chemical Management Program", "Complete chemical program management by Maven Solutions, delivering 10% lower cost or 10% better efficiency.", "/TCMP");
+export const metadata: Metadata = pageMetadata("Total Chemical Management Program", "Complete chemical program management by Maven Solutions, delivering 10% lower cost or 10% better efficiency.", "/tcmp");
 
 const steps = [
   { id: "01", name: "Understand", description: "We study your existing process, chemical consumption, costs, suppliers and performance requirements." },
