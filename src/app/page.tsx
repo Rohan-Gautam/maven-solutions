@@ -136,7 +136,7 @@ export default function Home() {
                             <p className="text-lg text-white/80 mb-10 max-w-md leading-relaxed">
                                 A complete, mill-focused approach to managing chemical consumption, performance and process efficiency — built around your machine, not ours.
                             </p>
-                            <Button href="/tcmp" className="bg-white text-sky-700 hover:bg-white/90 rounded-full px-7 font-bold">
+                            <Button href="/tcmp" variant="secondary" className="border-white text-white hover:bg-white hover:text-[#091540] rounded-full px-7">
                                 Explore TCMP <ArrowRight size={16} className="ml-2" />
                             </Button>
                         </div>
