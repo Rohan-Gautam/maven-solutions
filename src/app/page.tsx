@@ -117,47 +117,42 @@ export default function Home() {
             </section>
 
             {/* Section 3 - Featured Programme (TCMP) */}
-            <section className="relative overflow-hidden bg-gradient-to-br from-[#EEF7FA] to-[#E2F0F7] py-20 sm:py-32">
-                <div className="absolute right-0 top-0 bottom-0 w-[45%] bg-white/70 skew-x-[-12deg] translate-x-20 hidden lg:block" />
+            <section className="relative overflow-hidden bg-[#091540] py-24 sm:py-32 text-white">
+                <div className="absolute inset-0 w-full h-full lg:w-[60%] lg:left-[40%]">
+                    <Image src="/images/tcmp-feature.png" alt="TCMP" fill className="object-cover opacity-70" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#091540] via-[#091540]/90 to-transparent" />
+                </div>
                 <Container className="relative">
-                    <div className="grid gap-16 lg:grid-cols-2 items-center">
+                    <div className="grid lg:grid-cols-2 gap-12">
                         <div>
-                            <p className="text-[0.7rem] font-bold tracking-[0.15em] text-slate-600 mb-4">FEATURED PROGRAM</p>
-                            <h2 className="text-[5.5rem] font-black tracking-tighter mb-1 leading-none">
-                                <span className="text-[#0B2B45]">T</span>
-                                <span className="text-[#13618C]">C</span>
-                                <span className="text-[#248B57]">M</span>
+                            <p className="text-[0.7rem] font-bold tracking-[0.15em] text-white/70 mb-5">FEATURED PROGRAM</p>
+                            <h2 className="text-[4.5rem] sm:text-[5.5rem] font-black tracking-tighter leading-none mb-3">
+                                <span className="text-white">T</span>
+                                <span className="text-[#2E9FB0]">C</span>
+                                <span className="text-[#4EB87A]">M</span>
                                 <span className="text-[#3CB371]">P</span>
                             </h2>
-                            <h3 className="text-[1.35rem] font-bold text-[#0B2B45] mb-4">Total Chemical Management Program</h3>
-                            <p className="text-lg text-slate-600 mb-8 max-w-md">
-                                A complete, mill-focused approach to managing chemical consumption, performance and process efficiency.
+                            <h3 className="text-xl font-bold text-white/80 mb-6">Total Chemical Management Program</h3>
+                            <p className="text-lg text-white/80 mb-10 max-w-md leading-relaxed">
+                                A complete, mill-focused approach to managing chemical consumption, performance and process efficiency — built around your machine, not ours.
                             </p>
-                            <div className="mt-8">
-                                <Button href="/tcmp" className="bg-[#0B2B45] hover:bg-[#0B2B45]/90 text-white rounded-md">
-                                    Explore TCMP <ArrowRight size={16} className="ml-2" />
-                                </Button>
-                            </div>
-                            <ul className="mt-12 space-y-5">
-                                <li className="flex items-center gap-4 text-[#0B2B45] font-semibold text-[0.95rem]">
-                                    <Settings className="text-[#2E9FB0]" size={22} strokeWidth={2.5} /> Holistic Process View
-                                </li>
-                                <li className="flex items-center gap-4 text-[#0B2B45] font-semibold text-[0.95rem]">
-                                    <BarChart3 className="text-[#2E9FB0]" size={22} strokeWidth={2.5} /> Optimised Chemical Usage
-                                </li>
-                                <li className="flex items-center gap-4 text-[#0B2B45] font-semibold text-[0.95rem]">
-                                    <Leaf className="text-[#2E9FB0]" size={22} strokeWidth={2.5} /> Measurable Mill Results
-                                </li>
-                            </ul>
+                            <Button href="/tcmp" variant="secondary" className="border-white text-white hover:bg-white hover:text-[#091540] rounded-full px-7">
+                                Explore TCMP <ArrowRight size={16} className="ml-2" />
+                            </Button>
                         </div>
-                        <div className="relative aspect-[4/3] sm:aspect-square max-w-[450px] mx-auto lg:mr-0 lg:ml-auto w-full rounded-[40px] sm:rounded-full overflow-hidden shadow-2xl border-[12px] border-white/60">
-                            <Image src="/images/tcmp-feature.png" alt="TCMP Feature" fill className="object-cover" />
-                            <div className="absolute top-10 right-10 text-right">
-                                <p className="text-[0.6rem] font-bold tracking-[0.15em] text-[#0B2B45] leading-tight">CHEMISTRY<br/>FOR A BRIGHTER<br/>TOMORROW</p>
-                            </div>
-                            <div className="absolute bottom-10 left-10 text-left bg-white/70 backdrop-blur-md p-3 rounded-lg border border-white/50">
-                                <p className="text-[0.55rem] font-bold tracking-[0.15em] text-[#0B2B45] leading-[1.4]">SMARTER CHEMISTRY<br/>STRONGER BUSINESS</p>
-                            </div>
+                        <div className="lg:mt-auto lg:justify-self-end w-full max-w-md">
+                            <ul className="space-y-6">
+                                {[
+                                    { icon: Settings, text: "Holistic Process View" },
+                                    { icon: BarChart3, text: "Optimised Chemical Usage" },
+                                    { icon: Leaf, text: "Measurable Mill Results" },
+                                    { icon: FlaskConical, text: "On-Site Technical Support" },
+                                ].map((item, i) => (
+                                    <li key={i} className="flex items-center gap-4 text-[1.05rem] text-white">
+                                        <item.icon className="text-white/80" size={22} strokeWidth={2} /> {item.text}
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
                     </div>
                 </Container>
