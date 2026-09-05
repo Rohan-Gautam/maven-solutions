@@ -290,7 +290,65 @@ export default function Home() {
                 </Container>
             </section>
 
-            {/* Section 8 - Closing CTA */}
+            {/* Section 8 - From our management desk */}
+            <section className="py-24 bg-white border-t border-slate-100">
+                <Container>
+                    <div className="text-center mb-16">
+                        <p className="text-[0.7rem] font-bold tracking-[0.15em] text-slate-400 uppercase mb-4">Voices of Leadership</p>
+                        <h2 className="text-4xl sm:text-5xl font-light tracking-tight text-[#0B2B45] leading-tight">
+                            From our <span className="font-bold">management desk</span>
+                        </h2>
+                    </div>
+                    <div className="grid gap-6 sm:grid-cols-2 max-w-4xl mx-auto">
+                        {[
+                            {
+                                quote: "The solutions provided were transformative for our operations. We've seen a remarkable improvement in efficiency and quality.",
+                                highlight: "transformative for our operations",
+                                name: "Management Member 1",
+                                title: "Title 1",
+                                initials: "M1",
+                            },
+                            {
+                                quote: "Exceptional service and outstanding results. The expertise and support from the Maven team have been invaluable to our success.",
+                                highlight: "expertise and support from the Maven team",
+                                name: "Management Member 2",
+                                title: "Title 2",
+                                initials: "M2",
+                            },
+                        ].map((review, i) => (
+                            <div key={i} className="flex flex-col rounded-2xl border border-slate-200 bg-white p-7 shadow-sm hover:shadow-md transition-shadow duration-300">
+                                <span className="text-[3rem] leading-none font-black text-[#0071E3] select-none mb-4">&ldquo;</span>
+                                <p className="text-[0.9rem] leading-7 text-slate-600 flex-1">
+                                    {review.quote.split(review.highlight).map((part, j, arr) => (
+                                        <span key={j}>
+                                            {part}
+                                            {j < arr.length - 1 && (
+                                                <span className="text-[#0071E3] font-medium">{review.highlight}</span>
+                                            )}
+                                        </span>
+                                    ))}
+                                </p>
+                                <div className="mt-8 flex items-end justify-between">
+                                    <div>
+                                        <p className="text-[1.1rem] font-bold text-[#0B2B45]">{review.name}</p>
+                                        <p className="text-xs text-slate-400 mt-0.5">{review.title}</p>
+                                        <div className="mt-3">
+                                            <svg className="text-[#0071E3]" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div className="h-12 w-12 rounded-full bg-[#0B2B45] flex items-center justify-center text-white text-sm font-bold shrink-0">
+                                        {review.initials}
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </Container>
+            </section>
+
+            {/* Section 9 - Closing CTA */}
             <section className="bg-[#F8F9FA] py-24 border-t border-slate-200">
                 <Container>
                     <div className="grid lg:grid-cols-[1fr_1fr] gap-12 items-center">
